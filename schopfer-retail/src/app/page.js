@@ -1,7 +1,7 @@
+import SnapScrollWrapper from "./components/SnapScrollWrapper";
 import Navbar from "./components/Navbar";
 import SocialBar from "./components/SocialBar";
 import Main from "./components/Main";
-import BrandsSlider from "./components/BrandsSlider";
 import ProblemsCard from "./components/ProblemsCard";
 import FeatureTabs from "./components/FeatureTabs";
 import Founder from "./components/Founder";
@@ -14,9 +14,9 @@ import FT2 from "./components/FT2";
 export default function Home() {
   return (
       <>
-      <div className="h-screen overflow-y-scroll snap-y snap-mandatory">
-        <Navbar />
-        <SocialBar />
+      <Navbar />
+      <SocialBar />
+      <SnapScrollWrapper>
         <Main />
         <ProblemsCard />
         {/* <FeatureTabs /> */}
@@ -26,7 +26,7 @@ export default function Home() {
         <Founder />
         <Testimonials />
         <Footer />
-      </div>
+      </SnapScrollWrapper>
       </>
   );
 }

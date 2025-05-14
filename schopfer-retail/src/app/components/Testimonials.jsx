@@ -84,8 +84,8 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="py-12 px-4 md:py-42 md:px-6 lg:px-10 snap-start bg-white">
-      <h2 className="text-3xl md:text-4xl font-semibold text-black mb-8 md:mb-12 text-center">
+    <section className="py-12 px-4 md:py-42 md:px-6 lg:px-10 section h-screen bg-[#F6FCDF] border-t border-[#94B4C1]/40">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#1E488F] mb-8 md:mb-12 text-center">
         Hear from our clients
       </h2>
 
@@ -94,20 +94,20 @@ export default function Testimonials() {
         <div className="absolute top-1/2 left-[-30px] transform -translate-y-1/2 -translate-x-4 md:-translate-x-8 z-10 hidden md:block">
           <button 
             onClick={goToPrev}
-            className="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors"
+            className="bg-[#1E488F] p-2 rounded-full shadow-md hover:bg-[#1E488F]/90 transition-colors"
             aria-label="Previous testimonials"
           >
-            <ChevronLeft className="w-5 h-5 text-gray-700" />
+            <ChevronLeft className="w-5 h-5 text-[#F6FCDF]" />
           </button>
         </div>
         
         <div className="absolute top-1/2 right-[-30px] transform -translate-y-1/2 translate-x-4 md:translate-x-8 z-10 hidden md:block">
           <button 
             onClick={goToNext}
-            className="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors"
+            className="bg-[#1E488F] p-2 rounded-full shadow-md hover:bg-[#1E488F]/90 transition-colors"
             aria-label="Next testimonials"
           >
-            <ChevronRight className="w-5 h-5 text-gray-700" />
+            <ChevronRight className="w-5 h-5 text-[#F6FCDF]" />
           </button>
         </div>
 
@@ -116,16 +116,16 @@ export default function Testimonials() {
           {currentTestimonials.map((testimonial, index) => (
             <div
               key={`${currentIndex}-${index}`}
-              className="bg-[#F6F8E8] p-4 md:p-6 rounded-xl shadow-sm h-full flex flex-col justify-between"
+              className="bg-white p-4 md:p-6 rounded-xl shadow-sm h-full flex flex-col justify-between border border-[#94B4C1]/30"
             >
-              <p className="text-black text-sm md:text-base mb-4 md:mb-6 leading-relaxed">
+              <p className="text-[#001F3F] text-sm md:text-base mb-4 md:mb-6 leading-relaxed">
                 "{testimonial.quote}"
               </p>
               <div>
-                <p className="text-black font-semibold">
+                <p className="text-[#1E488F] font-semibold">
                   {testimonial.name}
                 </p>
-                <p className="text-gray-600 text-sm">
+                <p className="text-[#94B4C1] text-sm">
                   {testimonial.company}
                 </p>
               </div>
@@ -137,18 +137,18 @@ export default function Testimonials() {
         <div className="flex justify-center items-center mt-6 md:hidden space-x-6">
           <button 
             onClick={goToPrev}
-            className="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors"
+            className="bg-[#1E488F] p-2 rounded-full shadow-md hover:bg-[#1E488F]/90 transition-colors"
             aria-label="Previous testimonials"
           >
-            <ChevronLeft className="w-5 h-5 text-gray-700" />
+            <ChevronLeft className="w-5 h-5 text-[#F6FCDF]" />
           </button>
           
           <button 
             onClick={goToNext}
-            className="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors"
+            className="bg-[#1E488F] p-2 rounded-full shadow-md hover:bg-[#1E488F]/90 transition-colors"
             aria-label="Next testimonials"
           >
-            <ChevronRight className="w-5 h-5 text-gray-700" />
+            <ChevronRight className="w-5 h-5 text-[#F6FCDF]" />
           </button>
         </div>
 
@@ -159,7 +159,7 @@ export default function Testimonials() {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-5 h-2 rounded-lg transition-colors ${
-                index === currentIndex ? 'bg-purple-700' : 'bg-gray-300'
+                index === currentIndex ? 'bg-lime-400' : 'bg-[#94B4C1]/40'
               }`}
               aria-label={`Go to testimonial group ${index + 1}`}
             ></button>

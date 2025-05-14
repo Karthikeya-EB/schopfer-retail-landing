@@ -46,21 +46,21 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen snap-start py-20 lg:pt-24 px-4 sm:px-6 lg:px-8 bg-[#1A2E3C]">
-      <div className="max-w-4xl mx-auto">
+    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-[#001F3F] border-t border-[#94B4C1]/40 section">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-white tracking-tight sm:text-4xl">
+          <h1 className="text-4xl font-extrabold text-[#F6FCDF] tracking-tight sm:text-4xl">
             Frequently Asked Questions
           </h1>
-          <div className="mt-3 h-1 w-20 bg-indigo-600 mx-auto rounded-full"></div>
+          <div className="mt-3 h-1 w-20 bg-[#859F3D] mx-auto rounded-full"></div>
         </div>
 
         <div className="space-y-2">
           {faqData.map((faq, index) => (
             <div 
               key={index}
-              className={`bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 ${
-                activeIndex === index ? 'ring-2 ring-indigo-500 ring-opacity-50' : 'hover:shadow-lg'
+              className={`bg-[#F6FCDF] rounded-xl shadow-md overflow-hidden transition-all duration-300 ${
+                activeIndex === index ? 'ring-2 ring-[#859F3D] ring-opacity-70' : 'hover:shadow-lg'
               }`}
             >
               <button
@@ -68,14 +68,14 @@ export default function Home() {
                 className="w-full px-6 py-3 flex justify-between items-center focus:outline-none"
                 aria-expanded={activeIndex === index}
               >
-                <h3 className={`text-lg md:text-md text-left text-gray-800 ${activeIndex === index ? 'font-semibold' : 'font-medium'}`}
+                <h3 className={`text-lg md:text-md text-left text-[#001F3F] ${activeIndex === index ? 'font-semibold' : 'font-medium'}`}
                 > {faq.question}
                 </h3>
                 
                 <span className="ml-6 flex-shrink-0">
                   <svg
                     className={`w-6 h-6 transform transition-transform duration-300 ${
-                      activeIndex === index ? 'rotate-180 text-indigo-600' : 'text-gray-400'
+                      activeIndex === index ? 'rotate-180 text-[#1E488F]' : 'text-[#94B4C1]'
                     }`}
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -92,11 +92,11 @@ export default function Home() {
                   </svg>
                 </span>
               </button>
-              <div className={`transition-max-height duration-300 ease-in-out overflow-hidden ${
-                activeIndex === index ? 'max-h-96' : 'max-h-0'
+              <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                activeIndex === index ? 'max-h-[1000px]' : 'max-h-0'
               }`}>
                 <div className="px-6 pb-5">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <p className="text-[#001F3F]/90 leading-relaxed">{faq.answer}</p>
                 </div>
               </div>
             </div>

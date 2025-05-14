@@ -1,6 +1,12 @@
 import "./globals.css";
+import { Raleway } from 'next/font/google';
 
-
+const raleway = Raleway({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-raleway',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], // Full weight range supported by Raleway
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -9,10 +15,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`antialiased`}
-      >
+    <html lang="en" className={raleway.variable}>
+      <body className="antialiased">
         {children}
       </body>
     </html>

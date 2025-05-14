@@ -2,8 +2,8 @@ import { ChevronRight, Edit, Image, PieChart } from 'lucide-react';
 
 export default function ProblemsCard() {
     return (
-        <div id="features" className="w-full mx-auto px-6 bg-gray-50 p-14 md:px-20 md:py-38 snap-start">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-black mb-12">
+        <div id="features" className="w-full mx-auto px-6 bg-[#F6FCDF] p-14 md:px-20 md:py-38 section h-screen border-t border-[#94B4C1]/40">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-[#001F3F] mb-12">
           How We Transform Your <span className="text-lime-600">Product Listings</span>
         </h2>
         
@@ -28,17 +28,18 @@ export default function ProblemsCard() {
               buttonText: "Read More"
             }
           ].map((feature, i) => (
-            <div key={i} className="bg-white border border-black/20 rounded-xl p-6 flex flex-col">
+            <div key={i} className="bg-white border border-[#94B4C1]/60 rounded-xl p-6 flex flex-col shadow-sm">
               <div className="flex items-center mb-4 gap-4">
-                <div className="w-12 h-12 bg-lime-400 text-green-800 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#84cc16] text-[#001F3F] rounded-lg flex items-center justify-center flex-shrink-0">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl text-black font-semibold text-center">{feature.title}</h3>
+                <h3 className="text-xl text-[#1E488F] font-semibold">{feature.title}</h3>
               </div>
 
-              <p className="text-md leading-7 mb-4 flex flex-grow text-black">{feature.description}</p>
+              <p className="text-md leading-7 mb-4 flex flex-grow text-[#001F3F] font-medium text-justify">{feature.description}</p>
+              
               {/* Button at bottom */}
-              <button className="w-full py-3 px-4 font-semibold bg-green-800 hover:bg-green-600 text-white rounded-md border border-white/30 text-sm  transition flex items-center justify-center">
+              <button className="w-full py-3 px-4 font-semibold bg-[#1E488F] hover:bg-[#1E488F]/90 text-[#F6FCDF] rounded-md border border-[#94B4C1]/30 text-sm transition flex items-center justify-center">
                 {feature.buttonText}
                 <ChevronRight className="ml-2 w-4 h-4" />
               </button>

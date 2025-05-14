@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --background-dark: #1A2E3C;
@@ -13,10 +12,14 @@
   --green-800: #065f46;
 }
 
+:root {
+  font-family: var(--font-raleway), sans-serif;
+}
+
 .btn{
   padding: 1rem 2rem;
   border-radius: 0.375rem; 
-  font-weight: 600; 
+  font-weight: 700; 
   display: flex;
   font-size: 1rem;
   align-items: center;
@@ -67,7 +70,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-raleway), sans-serif !important; 
   color: var(--primary-foreground);
   background-color: white;
   background-repeat: no-repeat;

@@ -1,40 +1,41 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+import { useRouter } from "next/navigation";
 import { X, Menu } from 'lucide-react'; // For hamburger and close icons
 
 export default function Header() {
+  const router = useRouter(); 
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 flex justify-center z-20 bg-transparent ">
-      <div className="w-full text-black max-w-[1350px] mx-auto bg-white shadow-md flex items-center justify-between px-10 py-3 rounded-b-2xl">
+    <header className="fixed top-0 left-0 right-0 flex justify-center z-20 bg-transparent">
+      <div className="w-full text-[#001F3F] max-w-[1350px] mx-auto bg-[#F6FCDF] shadow-md flex items-center justify-between px-10 py-3 rounded-b-2xl border-b border-[#94B4C1]/40">
 
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <span className="font-bold text-4xl">
+          <span className="font-extrabold text-4xl cursor-pointer text-[#1E488F]" onClick={() => router.push("/")}>
             Schopfer
           </span>
         </div>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#" className="font-semibold text-">About Us</a>
-          <a href="#" className="font-semibold text-md">Case Studies</a>
-          <a href="#" className="font-semibold text-md">Blogs</a>
+          <a href="#" className="font-semibold text-[#001F3F] hover:text-[#1E488F] transition-colors">About Us</a>
+          <a href="#" className="font-semibold text-md text-[#001F3F] hover:text-[#1E488F] transition-colors" onClick={() => router.push("/caseStudies")}>Case Studies</a>
+          <a href="#" className="font-semibold text-md text-[#001F3F] hover:text-[#1E488F] transition-colors">Blogs</a>
         </nav>
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center space-x-3">
-          <button className="btn btnAction">
+          <button className="bg-[#000] text-[#fff] font-bold py-2 px-5 rounded-lg hover:bg-opacity-90 transition-all" onClick={() => router.push("/contact")}>
             Contact Us
           </button>
         </div>
 
         {/* Mobile Hamburger Button */}
         <button
-          className="md:hidden"
+          className="md:hidden text-[#001F3F]"
           onClick={() => setMenuOpen(true)}
         >
           <Menu size={28} />
@@ -45,30 +46,30 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       {menuOpen && (
 
-            <div className="fixed inset-0 bg-white z-30 flex flex-col p-6 space-y-4 overflow-y-auto">
+            <div className="fixed inset-0 bg-[#F6FCDF] z-30 flex flex-col p-6 space-y-4 overflow-y-auto">
                 
                 {/* Top: Logo + Close */}
-                <div className="flex items-center justify-between border-b border-gray-300 pb-2">
+                <div className="flex items-center justify-between border-b border-[#94B4C1] pb-2">
                 <div className="flex items-center space-x-2">
-                    <span className="font-bold text-black text-xl">
+                    <span className="font-bold text-[#1E488F] text-xl">
                     Schopfer
                     </span>
                 </div>
-                <button onClick={() => setMenuOpen(false)}>
+                <button onClick={() => setMenuOpen(false)} className="text-[#001F3F]">
                     <X size={28} />
                 </button>
                 </div>
 
                 {/* Nav Items */}
-                <nav className="flex flex-col text-black space-y-4">
-                <a href="#" className="font-semibold text-base">About Us</a>
-                <a href="#" className="font-semibold text-base">Case Studies</a>
-                <a href="#" className="font-semibold text-base">Blogs</a>
+                <nav className="flex flex-col text-[#001F3F] space-y-4">
+                <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors">About Us</a>
+                <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors">Case Studies</a>
+                <a href="#" className="font-semibold text-base hover:text-[#1E488F] transition-colors">Blogs</a>
                 </nav>
 
                 {/* Buttons */}
-                <div className="flex flex-col space-y-4 mt-auto border-t border-gray-300 pt-6">
-                <button className="btn btnAction">
+                <div className="flex flex-col space-y-4 mt-auto border-t border-[#94B4C1] pt-6">
+                <button className="bg-[#84cc16] text-[#F6FCDF] py-3 px-5 rounded-lg hover:bg-opacity-90 transition-all" onClick={() => router.push("/contact")}>
                     Contact Us
                 </button>
                 </div>
