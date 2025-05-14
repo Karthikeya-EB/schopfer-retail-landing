@@ -17,7 +17,7 @@ export default function SocialBar() {
           key={index}
           href={social.url}
           aria-label={`Follow us on ${social.name}`}
-          className="w-10 h-10 bg-white border border-green-800 bg-opacity-30 hover:bg-opacity-80 text-lime-700 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110 backdrop-blur-sm border-opacity-20"
+          className="w-10 h-10 bg-white border border-green-600 bg-opacity-30 hover:bg-opacity-80 text-lime-600 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110 backdrop-blur-sm border-opacity-20"
         >
           {social.icon === 'facebook' && (
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

@@ -28,7 +28,7 @@ export default function Founder() {
               </h2>
             </div>
 
-            <h3 className="text-base sm:text-xl font-semibold text-lime-400 mb-3">
+            <h3 className="text-base sm:text-xl font-semibold text-lime-500 mb-3">
               Founder
             </h3>
 

@@ -46,16 +46,16 @@ export default function Home() {
   };
 
   return (
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-[#001F3F] border-t border-[#94B4C1]/40 section">
+    <div className="py-26 px-4 sm:px-6 lg:px-8 bg-[#001F3F] border-t border-[#94B4C1]/40 section">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h1 className="text-4xl font-extrabold text-[#F6FCDF] tracking-tight sm:text-4xl">
             Frequently Asked Questions
           </h1>
-          <div className="mt-3 h-1 w-20 bg-[#859F3D] mx-auto rounded-full"></div>
+          <div className="mt-3 h-1 w-20 bg-lime-400 mx-auto rounded-full"></div>
         </div>
 
-        <div className="space-y-2">
+        <div className="space-y-2 pb-30">
           {faqData.map((faq, index) => (
             <div 
               key={index}
@@ -65,10 +65,10 @@ export default function Home() {
             >
               <button
                 onClick={() => toggleAccordion(index)}
-                className="w-full px-6 py-3 flex justify-between items-center focus:outline-none"
+                className="w-full px-6 py-2 flex justify-between items-center focus:outline-none"
                 aria-expanded={activeIndex === index}
               >
-                <h3 className={`text-lg md:text-md text-left text-[#001F3F] ${activeIndex === index ? 'font-semibold' : 'font-medium'}`}
+                <h3 className={`text-lg md:text-md text-left text-[#001F3F] p-0 ${activeIndex === index ? 'font-semibold' : 'font-medium'}`}
                 > {faq.question}
                 </h3>
                 
@@ -93,7 +93,7 @@ export default function Home() {
                 </span>
               </button>
               <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                activeIndex === index ? 'max-h-[1000px]' : 'max-h-0'
+                activeIndex === index ? 'max-h-[900px] p-0' : 'max-h-0'
               }`}>
                 <div className="px-6 pb-5">
                   <p className="text-[#001F3F]/90 leading-relaxed">{faq.answer}</p>

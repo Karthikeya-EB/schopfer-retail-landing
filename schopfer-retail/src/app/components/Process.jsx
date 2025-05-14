@@ -90,7 +90,7 @@ export default function Process() {
 
         <div className="relative">
           {/* Timeline connector */}
-          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[#235789] via-[#2F7CA0] to-[#3A8FB7] transform -translate-y-1/2 z-0"></div>
+          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[#259b23] via-[#0f9733] to-[#3A8FB7] transform -translate-y-1/2 z-0"></div>
           
           {/* Process steps */}
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 relative z-10">
@@ -106,7 +106,7 @@ export default function Process() {
                 <div className={`${stepColors[index].bg} rounded-2xl p-4 ${stepColors[index].border} border shadow-md hover:shadow-lg transition-shadow duration-300 max-w-4xl max-h-[350px]`}>
                   <div className="flex flex-col items-center mb-4">
                     <span className={`text-3xl font-bold ${stepColors[index].text} mb-3`}>{step.number}</span>
-                    <div className={`p-3 ${stepColors[index].iconBg} rounded-full shadow-md mb-3`}>
+                    <div className={`p-3 ${stepColors[index].iconBg} border-2 border-[#056403] rounded-full shadow-md mb-3`}>
                       {React.cloneElement(step.icon, { className: `h-8 w-8 ${stepColors[index].iconColor}` })}
                     </div>
                     <h3 className={`text-xl font-semibold ${stepColors[index].text} text-center`}>{step.title}</h3>
