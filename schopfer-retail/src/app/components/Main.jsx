@@ -59,21 +59,21 @@ export default function Main() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <button className="bg-[#001F3F] text-[#F6FCDF] font-bold py-3 px-6 rounded-lg flex items-center hover:border-lime-400 ">
+            <button className="bg-[#001F3F] text-[#F6FCDF] font-bold py-3 px-8 rounded-lg flex items-center hover:border-lime-400 ">
               Schedule a Call <ChevronRight className="ml-2 w-5 h-5" />
             </button>
           </div>
         </div> 
             
-        {/* Image with fixed dimensions */}
-        {/* <div className="flex-1 flex justify-center items-center">
+        
+        <div className="flex-1 flex justify-center items-center">
           <div className="p-2 ml-10 mx-w-md rounded-lg w-full">
             <img
               src='/feature-images/product-listing.jpg'
               className="w-full h-full object-fit rounded-md"
             />
           </div>
-        </div> */}
+        </div>
       </div>
    
 

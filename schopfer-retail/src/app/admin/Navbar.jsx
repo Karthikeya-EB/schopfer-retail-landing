@@ -21,17 +21,11 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#" className="font-semibold text-[#001F3F] hover:text-[#1E488F] transition-colors" onClick={() => router.push("/about-us")}>About Us</a>
-          <a href="#" className="font-semibold text-md text-[#001F3F] hover:text-[#1E488F] transition-colors" onClick={() => router.push("/case-study")}>Case Studies</a>
+          <a href="#" className="font-semibold text-[#001F3F] hover:text-[#1E488F] transition-colors" onClick={() => router.push("")}>Form Submissions</a>
+          <a href="#" className="font-semibold text-md text-[#001F3F] hover:text-[#1E488F] transition-colors" onClick={() => router.push("")}>Case Studies</a>
           <a href="#" className="font-semibold text-md text-[#001F3F] hover:text-[#1E488F] transition-colors">Blogs</a>
         </nav>
 
-        {/* Desktop Buttons */}
-        <div className="hidden md:flex items-center space-x-3">
-          <button className="bg-[#000] text-[#fff] font-bold py-2 px-5 rounded-lg hover:bg-opacity-90 transition-all" onClick={() => router.push("/contact")}>
-            Contact Us
-          </button>
-        </div>
 
         {/* Mobile Hamburger Button */}
         <button

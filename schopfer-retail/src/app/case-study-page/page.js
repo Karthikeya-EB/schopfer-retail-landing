@@ -1,12 +1,12 @@
 import Navbar from "../components/Navbar";
-import CaseStudiesPage from "./caseStudiesPage";
+import CaseStudyTemplate from "./CaseStudyTemplate";
 import Footer from "../components/Footer";
 
-export default function CaseStudyPage() {
+export default function CaseStudiesTemplate () {
   return (
       <>
       <Navbar />
-      <CaseStudiesPage />
+      <CaseStudyTemplate />
       <Footer />
       </>
   );
